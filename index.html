@@ -2,16 +2,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Litebit Clone</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Crypto Market + DeFi + Option</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Crypto Price Viewer</h1>
-        <div id="price">Loading price...</div>
-    </div>
-    <script src="main.js"></script>
+  <h1>Crypto Market Dashboard</h1>
+
+  <section>
+    <h2>📈 Market Prices</h2>
+    <table id="market">
+      <thead>
+        <tr>
+          <th>Coin</th>
+          <th>Price (USD)</th>
+          <th>24h Change</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>💰 DeFi Staking (USDT)</h2>
+    <label>Amount:</label>
+    <input type="number" id="amount" value="1000">
+    <label>Days:</label>
+    <select id="days">
+      <option value="7">7d (APR 8%)</option>
+      <option value="28">28d (APR 12%)</option>
+      <option value="60">60d (APR 18%)</option>
+    </select>
+    <button onclick="calculateYield()">Calculate</button>
+    <p id="yield-result"></p>
+  </section>
+
+  <section>
+    <h2>🧨 Trade Option (Mock)</h2>
+    <label>Choose coin:</label>
+    <select id="option-coin">
+      <option value="bitcoin">BTC</option>
+      <option value="ethereum">ETH</option>
+    </select>
+    <label>Prediction:</label>
+    <select id="direction">
+      <option value="up">Up</option>
+      <option value="down">Down</option>
+    </select>
+    <button onclick="placeOption()">Place Trade</button>
+    <p id="option-result"></p>
+  </section>
+
+  <script src="main.js"></script>
 </body>
 </html>
