@@ -1,22 +1,49 @@
 
 body {
-  background-color: #111;
-  color: #eee;
+  background-color: #0a0a0a;
+  color: #f1f1f1;
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #111;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  color: #0ff;
+}
+nav a {
+  margin-left: 20px;
+  color: #eee;
+  text-decoration: none;
+}
+main {
   padding: 20px;
 }
-h1, h2 { color: #0ff; }
+h2 {
+  color: #0ff;
+}
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
   margin-bottom: 20px;
 }
-table, th, td {
+th, td {
   border: 1px solid #444;
   padding: 8px;
   text-align: center;
 }
-input, select {
-  margin: 5px;
-  padding: 5px;
+input, select, button {
+  padding: 8px;
+  margin: 5px 0;
+}
+footer {
+  background: #111;
+  color: #999;
+  text-align: center;
+  padding: 10px;
 }

@@ -1,57 +1,71 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Crypto Market + DeFi + Option</title>
+  <title>Litebit Việt Nam</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Crypto Market Dashboard</h1>
+  <header>
+    <h1>Litebit Việt Nam</h1>
+    <nav>
+      <a href="#">Thị trường</a>
+      <a href="#">Gửi tiền (DeFi)</a>
+      <a href="#">Giao dịch Quyền chọn</a>
+      <a href="#">Ví</a>
+      <a href="#">KYC</a>
+      <a href="#">Đăng nhập</a>
+    </nav>
+  </header>
 
-  <section>
-    <h2>📈 Market Prices</h2>
-    <table id="market">
-      <thead>
-        <tr>
-          <th>Coin</th>
-          <th>Price (USD)</th>
-          <th>24h Change</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </section>
+  <main>
+    <section>
+      <h2>Bảng giá tiền điện tử</h2>
+      <table id="market">
+        <thead>
+          <tr>
+            <th>Coin</th>
+            <th>Giá (USD)</th>
+            <th>Thay đổi 24h</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
 
-  <section>
-    <h2>💰 DeFi Staking (USDT)</h2>
-    <label>Amount:</label>
-    <input type="number" id="amount" value="1000">
-    <label>Days:</label>
-    <select id="days">
-      <option value="7">7d (APR 8%)</option>
-      <option value="28">28d (APR 12%)</option>
-      <option value="60">60d (APR 18%)</option>
-    </select>
-    <button onclick="calculateYield()">Calculate</button>
-    <p id="yield-result"></p>
-  </section>
+    <section>
+      <h2>Gửi tiền (DeFi)</h2>
+      <input type="number" id="amount" placeholder="Nhập số USDT">
+      <select id="days">
+        <option value="7">7 ngày - Lãi 8%</option>
+        <option value="28">28 ngày - Lãi 12%</option>
+        <option value="60">60 ngày - Lãi 18%</option>
+      </select>
+      <button onclick="calculateYield()">Tính lợi nhuận</button>
+      <p id="yield-result"></p>
+    </section>
 
-  <section>
-    <h2>🧨 Trade Option (Mock)</h2>
-    <label>Choose coin:</label>
-    <select id="option-coin">
-      <option value="bitcoin">BTC</option>
-      <option value="ethereum">ETH</option>
-    </select>
-    <label>Prediction:</label>
-    <select id="direction">
-      <option value="up">Up</option>
-      <option value="down">Down</option>
-    </select>
-    <button onclick="placeOption()">Place Trade</button>
-    <p id="option-result"></p>
-  </section>
+    <section>
+      <h2>Giao dịch quyền chọn (mô phỏng)</h2>
+      <label>Chọn coin:</label>
+      <select id="option-coin">
+        <option value="bitcoin">BTC</option>
+        <option value="ethereum">ETH</option>
+      </select>
+      <label>Dự đoán:</label>
+      <select id="direction">
+        <option value="up">Tăng</option>
+        <option value="down">Giảm</option>
+      </select>
+      <button onclick="placeOption()">Đặt lệnh</button>
+      <p id="option-result"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Litebit Việt Nam - Mô phỏng sàn giao dịch</p>
+  </footer>
 
   <script src="main.js"></script>
 </body>

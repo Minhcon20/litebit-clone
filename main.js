@@ -26,13 +26,13 @@ function calculateYield() {
   let apr = days === 7 ? 8 : days === 28 ? 12 : 18;
   const profit = amount * (apr / 100) * (days / 365);
   document.getElementById('yield-result').innerText = 
-    `Estimated profit: $${profit.toFixed(2)} in ${days} days`;
+    `Lợi nhuận ước tính: $${profit.toFixed(2)} sau ${days} ngày`;
 }
 
 function placeOption() {
   const coin = document.getElementById('option-coin').value;
   const dir = document.getElementById('direction').value;
-  const outcome = Math.random() > 0.5 ? 'WIN ✅' : 'LOSE ❌';
+  const outcome = Math.random() > 0.5 ? 'THẮNG ✅' : 'THUA ❌';
   document.getElementById('option-result').innerText =
-    `Trade on ${coin.toUpperCase()} going ${dir.toUpperCase()}: ${outcome}`;
+    `Lệnh ${dir.toUpperCase()} với ${coin.toUpperCase()}: ${outcome}`;
 }
